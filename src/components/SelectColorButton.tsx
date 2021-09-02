@@ -1,4 +1,4 @@
-import { setColorPick , PixelPainterStore } from "../stores/PixelPainterStore"
+import { setColorPick, PixelPainterStore } from "../stores/PixelPainterStore"
 
 type SelectColorButtonProps = {
   color: string;
@@ -11,7 +11,7 @@ const SelectColorButton = ({ color }: SelectColorButtonProps) => {
 
   const computeRingSize = () => {
 
-    if(color === state.colorPick)
+    if (color === state.colorPick)
       return "ring-green-400 ring-8"
     else
       return ""
@@ -21,7 +21,7 @@ const SelectColorButton = ({ color }: SelectColorButtonProps) => {
   return (
     <div className={`${computeRingSize()} rounded-md border-black border-2 w-12 h-12 cursor-pointer `}
       style={{ backgroundColor: color }}
-      onClick = {() => {setColorPick(color) ; console.log(color)}}
+      onClick={() => { setColorPick(color); console.log(color) }}
     >
     </div>
   )
